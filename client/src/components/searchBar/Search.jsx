@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./search.scss";
 
+const types = ["buy", "rent"];
+
 const Search = () => {
   const [query, setQuery] = useState({
     type: "buy",
@@ -8,11 +10,23 @@ const Search = () => {
     minPrice: 0,
     maxPrice: 0,
   });
+
+  const switchType = (val) => {
+    setQuery((prev) => ({ ...prev, type: val }));
+  };
+
   return (
     <div className="search">
       <div className="type">
-        <button>Buy</button>
-        <button>Rent</button>
+        {types.map((type) => (
+          <button
+            key={type}
+            onClick={() => switchType(type)}
+            className={query.type === type ? "active" : ""}
+          >
+            {type}
+          </button>
+        ))}
       </div>
 
       <form>
@@ -31,7 +45,10 @@ const Search = () => {
           max={10000000}
           placeholder="Max Price"
         />
-        <button src="/search.png"></button>
+        {/* <button src="/search.png"></button> */}
+        <button type="submit">
+          <img src="/search.png" alt="Search" />
+        </button>
       </form>
     </div>
   );
