@@ -1,4 +1,4 @@
-@import "./responsive.scss";
+@import "../../responsive.scss";
 
 .layout {
   height: 100vh;
@@ -31,7 +31,8 @@
   }
 
   .content{
-    flex: 1;
+    // flex: 1;
+    height: calc(100vh - 100px);
   }
 
 }
