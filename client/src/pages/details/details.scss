@@ -1,0 +1,89 @@
+.specifics{
+    display: flex;
+    height: 100%;
+    overflow-y: scroll;
+
+    .details{
+        flex: 3;
+
+        .wrapper{
+            padding-right: 10px;
+            padding-bottom: 40px;
+
+            .info{
+                margin-top: 50px;
+                .top{
+                    display: flex;
+                    justify-content: space-between;
+
+                    .post{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        h1{
+                            font-weight: 400;
+                        }
+
+                        .address{
+                            display: flex;
+                            gap: 5px;
+                            align-items: center;
+                            color: #888;
+                            font-size: 14px;
+
+                            img{
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+
+                        .price{
+                            background-color: #FFE28A;
+                            padding: 5px;
+                            border-radius: 5px;
+                            width: max-content;
+                            font-size: 20px;
+                            font-weight: 300;
+                        }
+                    }
+
+                    .user{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        padding: 10px 20px;
+                        background-color: #FFE28A;
+                        font-weight: 600;
+                        height: max-content;
+                        border-radius: 10px;
+
+                        img{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                .bottom{
+                    margin-top: 50px;
+                    color: #555;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    .features{
+        flex: 2;
+        background-color: #fff9e6;
+        height: 100%;
+
+        .wrapper{
+            padding: 0px 10px;
+        }
+    }
+}

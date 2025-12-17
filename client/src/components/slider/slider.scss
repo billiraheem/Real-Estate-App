@@ -1,0 +1,45 @@
+.slider{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    gap: 20px;
+
+    .full{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        background-color: black;
+        display: flex;
+
+        .arrow{}
+
+        .img{}
+    }
+
+    img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+    .big{
+        flex: 3;
+
+        
+    }
+
+    .small{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        
+        img{
+            height: 100px;
+        }
+    }
+}
