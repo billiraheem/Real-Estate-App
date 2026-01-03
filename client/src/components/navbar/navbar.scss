@@ -36,11 +36,11 @@ nav {
       }
 
       span {
-        @include md{
+        @include md {
           display: none;
         }
-        
-        @include sm{
+
+        @include sm {
           display: inline;
         }
       }
@@ -54,8 +54,9 @@ nav {
     align-items: center;
     // background-color: #FFF9E6;
 
-    @include md{
-        background-color: transparent;
+    @include md {
+      background-color: transparent;
+      margin-left: 10px;
     }
 
     a {
@@ -63,50 +64,96 @@ nav {
       margin: 20px;
     }
 
+    .user {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+
+      span {
+        @include sm {
+          display: none;
+        }
+
+        @include md {
+          display: none;
+        }
+      }
+    }
+
+     .profile {
+        padding: 12px 24px;
+        background-color: #ffbf00;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        overflow: hidden;
+
+        .notification {
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          background-color: red;
+          color: white;
+          border-radius: 50%;
+          width: 26px;
+          height: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
     .register {
       background-color: #ffbf00;
     }
 
-    .menuIcon{
-        display: none;
-        z-index: 999;
+    .menuIcon {
+      display: none;
+      z-index: 999;
 
-        img{
-            width: 36px;
-            height: 36px;
-            cursor: pointer;
-        }
+      img {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+      }
 
-
-        @include sm{
-            display: inline;
-        }
+      @include sm {
+        display: inline;
+      }
     }
 
-    .menu{
-        position: absolute;
-        top: 0;
-        right: -50%;
-        background-color: black;
-        color: white;
-        height: 100vh;
-        width: 50%;
-        transition: all 1s ease;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-size: 24px;
+    .menu {
+      position: absolute;
+      top: 0;
+      right: -50%;
+      background-color: black;
+      color: white;
+      height: 100vh;
+      width: 50%;
+      transition: all 1s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
 
-        &.active{
-            right: 0;
-        }
+      &.active {
+        right: 0;
+      }
 
-        @include sm{
-            a{
-                display: initial;
-            }
+      @include sm {
+        a {
+          display: initial;
         }
+      }
     }
   }
 }

@@ -5,6 +5,7 @@ import Layout from "./pages/layout/Layout";
 import Signup from "./pages/auth/signup/Signup";
 import Login from "./pages/auth/login/Login";
 import Details from "./pages/details/Details";
+import Profile from "./pages/profile/Profile";
 
 function App() {
 
@@ -36,6 +37,11 @@ function App() {
         {
           path: "/:id",
           element: <Details />
+        },
+
+        {
+          path: "/profile",
+          element: <Profile />
         },
       ]
     },
